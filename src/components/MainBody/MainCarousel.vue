@@ -6,10 +6,7 @@ export default {
 
 
 
-<template>
-    <TopCarousel />
-    <BottomCarousel />
-</template>
+<template></template>
 
 
 
