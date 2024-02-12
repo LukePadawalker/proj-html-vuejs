@@ -1,10 +1,7 @@
 <script>
-// logica carosello
-
-
-
-
-
+export default {
+    name: 'MainCarousel'
+}
 </script>
 
 
@@ -16,6 +13,4 @@
 
 
 
-<style lang="scss">
-@use './assets/scss/style.scss';
-</style>
+<style lang="scss"></style>
