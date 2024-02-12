@@ -1,10 +1,21 @@
 <script>
-
-
+import { store } from './data/store'
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
+export default {
+  name: 'anime',
+  components: { AppHeader, AppMain, AppFooter }
+}
 </script>
 
 
-<template></template>
+
+<template>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
+</template>
 
 
 
