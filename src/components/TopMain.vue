@@ -1,5 +1,6 @@
 <script>
-import LifestylesCarousel from './MainBody/TopComps/MainLifestyles.vue';
+import LifestylesCarousel from './MainBody/TopComps/LifestylesCarousel.vue';
+import DisplayCard from './MainBody/TopComps/DisplayCard.vue'
 import { gallery } from '../data/index'
 
 export default {
@@ -7,10 +8,11 @@ export default {
     data: () => ({
         ...gallery
     }),
-    components: { LifestylesCarousel },
+    components: { LifestylesCarousel, DisplayCard },
     computed: {
         galleryFilter() {
-            return filteredGallery = gallery.filter(g => (g.labels.includes("Travel" || "Lifestyle")))
+            const filteredGallery = gallery.filter(g => (g.labels.includes("Travel") || g.labels.includes("Lifestyle")))
+            return filteredGallery
         }
     }
 }
@@ -20,41 +22,38 @@ export default {
 <template>
     <LifestylesCarousel />
     <section id="display-boxes" class="row">
-        <div class="col-3 d-flex ">
-            <div class="box-s"><img src="" alt=""></div>
-            <div class="box-s"></div>
+        <div class="col-3">
+            <DisplayCard class="small" :object="galleryFilter[0]" />
+            <DisplayCard class="small" :object="galleryFilter[1]" />
         </div>
-        <div class="col-6 box-xl">
-
+        <div class="col-6">
+            <DisplayCard class="big" :object="galleryFilter[2]" />
         </div>
-        <div class="col-3 d-flex">
-            <div class="box-s"></div>
-            <div class="box-s"></div>
+        <div class="col-3">
+            <DisplayCard class="small" :object="galleryFilter[3]" />
+            <DisplayCard class="small" :object="galleryFilter[4]" />
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 #display-boxes {
-    height: 300px;
-    background-color: bisque;
     justify-content: space-between;
+    height: 400px;
 
     &>div {
         flex-wrap: wrap;
+        flex-shrink: 0;
         align-content: space-between;
+        height: 100%;
     }
-}
 
-.box-s {
-    width: 100%;
-    height: 50%;
-    border: 1px solid black;
-}
+    .small {
+        height: 50%;
+    }
 
-.box-xl {
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
+    .big {
+        height: 100%;
+    }
 }
 </style>
