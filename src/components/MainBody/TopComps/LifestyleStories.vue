@@ -124,6 +124,10 @@ button:hover {
     content: '';
 }
 
+.left-poster:hover {
+    opacity: .7;
+}
+
 .poster {
     width: 100%;
     height: 100%;
@@ -175,6 +179,11 @@ button:hover {
 .gallery-poster {
     position: relative;
 }
+
+.gallery-poster:hover {
+    opacity: .7;
+}
+
 
 .gallery-poster::before {
     position: absolute;
