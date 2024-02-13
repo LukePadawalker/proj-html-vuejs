@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'MainLifestyles'
+    name: 'PostsCarousel'
 }
 </script>
 
