@@ -95,6 +95,10 @@ button {
     padding: 5px 20px;
 }
 
+button:hover {
+    background-color: $red;
+}
+
 .section-image {
     margin-top: 20px;
     width: 100%;
@@ -139,6 +143,10 @@ button {
     position: absolute;
     top: 15px;
     left: 15px;
+}
+
+.label:hover {
+    color: $red;
 }
 
 .info {
