@@ -4,6 +4,32 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <div class="email-form">
+        <h5>subrscibe to newsletter</h5>
+        <form>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email">
+                <button type="button" class="btn btn-secondary shadow fw-bold">SUBSCRIBE</button>
+            </div>
 
-<style lang="scss"></style>
+        </form>
+    </div>
+</template>
+
+<style lang="scss"scoped>
+h5 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+input {
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    width: 100%;
+    height: 3rem;
+}
+</style>

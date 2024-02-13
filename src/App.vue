@@ -5,7 +5,47 @@ import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'anime',
-  components: { AppHeader, AppMain, AppFooter }
+  components: { AppHeader, AppMain, AppFooter },
+  data: () => ({
+    footerMenus: [
+      {
+        title: 'get started',
+        links: [
+          { url: '#', text: 'Resoucers' },
+          { url: '#', text: 'Tutorials' },
+          { url: '#', text: 'Examples' },
+          { url: '#', text: 'Docs' },
+        ]
+      },
+      {
+        title: 'about',
+        links: [
+          { url: '#', text: 'Stories' },
+          { url: '#', text: 'Community' },
+          { url: '#', text: 'Blog' },
+          { url: '#', text: 'Brand Assets' },
+        ]
+      },
+      {
+        title: 'features',
+        links: [
+          { url: '#', text: 'Overview' },
+          { url: '#', text: 'Design' },
+          { url: '#', text: 'Code' },
+          { url: '#', text: 'Collaborate' },
+        ]
+      },
+      {
+        title: 'quick links',
+        links: [
+          { url: '#', text: 'Stories' },
+          { url: '#', text: 'Community' },
+          { url: '#', text: 'Blog' },
+          { url: '#', text: 'Brand Assets' },
+        ]
+      },
+    ]
+  })
 }
 </script>
 
@@ -14,7 +54,7 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
-  <AppFooter />
+  <AppFooter :menus="footerMenus" />
 </template>
 
 
