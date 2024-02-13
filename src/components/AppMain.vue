@@ -1,9 +1,10 @@
 <script>
+import FinalIcons from './MainBody/BottomComps/FinalIcons.vue';
 import BottomMain from './BottomMain.vue';
 import TopMain from './TopMain.vue';
 export default {
     name: 'AppMain',
-    components: { BottomMain, TopMain }
+    components: { BottomMain, TopMain, FinalIcons }
 }
 </script>
 
@@ -19,6 +20,7 @@ export default {
     <div class="container">
         <BottomMain />
     </div>
+    <FinalIcons />
 </template>
 
 <style lang="scss" scoped>
