@@ -11,27 +11,36 @@ export default {
 
 <template>
     <div class="card">
-        <img :src="`src/assets/img/${object.src}`" :alt="title">
-        <div id="labels">
+        <picture>
+            <div class="img filter"></div>
+            <img class="img" :src="`src/assets/img/${object.src}`" :alt="object.title">
+        </picture>
+        <div id="labels" class="p-4">
             <span class="label" v-for="label in object.labels">{{ label }}</span>
         </div>
-        <div>
-            <span>
-                <i class="fa-solid fa-user"></i> demo
+        <div class="info p-4">
+            <span class="w-100">
+                <i class="fa-solid fa-user p-1"></i> demo
+                <i class="fa-solid fa-calendar-days p-1"></i>
+                <span>{{ object.date }}</span>
             </span>
-            <span>{{ object.date }}</span>
-            <span>{{ object.title }}</span>
+            <h6 class="w-100">{{ object.title }}</h6>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .card {
-    background-color: transparent;
     flex-shrink: 0;
     flex-grow: 1;
-    padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 
+    border: 0;
+    background-color: transparent;
+
+    padding: 6px;
     width: 100%;
 }
 
@@ -42,15 +51,49 @@ export default {
     margin: 5px;
 }
 
-img {
+picture {
+    position: absolute;
     width: 100%;
     height: 100%;
-
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -1;
+
+
+
+    .img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    // .img.filter {
+    //     background: rgba(0, 0, 0, 0.50);
+    // }
+
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+
+    h6 {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
 }
 </style>

@@ -98,7 +98,7 @@ export default {
     top: 50%;
     left: calc(50% - 25px);
     transform: translate(-50%, -50%);
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
 .gallery-col {
@@ -110,7 +110,7 @@ export default {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.655);
     overflow: hidden;
-    transition: all 0.5 ease;
+    transition: all 0.4 ease;
 
 
     /*Position relative per opacità statica */
@@ -126,9 +126,10 @@ export default {
     }
 
     img {
+        position: absolute;
+        right: 0;
         border-radius: 5px;
         width: 300px;
-        transform: translateX(-60px);
         object-fit: contain;
         overflow: hidden;
         opacity: 1;
@@ -165,7 +166,7 @@ export default {
 
 
 .gallery-col:hover img {
-    transform: translateX(-1px);
+    transform: translateX(60px);
     opacity: 0.4;
 
 
@@ -192,7 +193,7 @@ export default {
 
     .post {
         visibility: hidden;
-        transition: all .5s ease;
+        transition: all .4s ease;
         transform: translateX(-25px);
         color: transparent;
         text-transform: uppercase;

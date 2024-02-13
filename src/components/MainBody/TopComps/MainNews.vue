@@ -19,27 +19,26 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <section id="display-boxes" class="row">
-            <div class="col-3">
-                <DisplayCard class="small" :object="galleryFilter[0]" />
-                <DisplayCard class="small" :object="galleryFilter[1]" />
-            </div>
-            <div class="col-6">
-                <DisplayCard class="big" :object="galleryFilter[2]" />
-            </div>
-            <div class="col-3">
-                <DisplayCard class="small" :object="galleryFilter[3]" />
-                <DisplayCard class="small" :object="galleryFilter[4]" />
-            </div>
-        </section>
-    </div>
+    <section id="display-boxes" class="row">
+        <div class="col">
+            <DisplayCard class="small" :object="galleryFilter[0]" />
+            <DisplayCard class="small" :object="galleryFilter[1]" />
+        </div>
+        <div class="col col-6">
+            <DisplayCard class="big" :object="galleryFilter[2]" />
+        </div>
+        <div class="col">
+            <DisplayCard class="small" :object="galleryFilter[3]" />
+            <DisplayCard class="small" :object="galleryFilter[4]" />
+        </div>
+    </section>
 </template>
 
 <style lang="scss">
 #display-boxes {
     justify-content: space-between;
     height: 400px;
+    padding: 0 12px;
 
     &>div {
         flex-wrap: wrap;
@@ -48,8 +47,14 @@ export default {
         height: 100%;
     }
 
+    .col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .small {
         height: 50%;
+
     }
 
     .big {
