@@ -1,4 +1,4 @@
-const ytVideos = [
+export const ytVideos = [
     {
         id: 1,
         url: 'https://www.youtube.com/watch?v=ebHd_3QJNBA',

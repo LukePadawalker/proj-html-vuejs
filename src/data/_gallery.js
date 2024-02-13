@@ -1,4 +1,4 @@
-const gallery = [
+export const gallery = [
     {
         id: 1,
         title: 'The Best Healthy Foods in 2022',
