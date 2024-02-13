@@ -21,7 +21,7 @@ export default {
                 <div class="label">Lifestyle</div>
                 <div class="info">
                     <div>
-                        <span><i class="fa-solid fa-user"></i> Demo </span>
+                        <span><i class="fa-solid fa-user"></i> demo </span>
                         <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
                     </div>
                     <h5>Place For A Road Trip</h5>
@@ -37,7 +37,7 @@ export default {
                     </div>
                     <div class="gallery-info">
                         <div>
-                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-user"></i> demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
                         </div>
                         <h5>Music The Love Of My Life</h5>
@@ -51,7 +51,7 @@ export default {
                     </div>
                     <div class="gallery-info">
                         <div>
-                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-user"></i> demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
                         </div>
                         <h5>The Best Success Stories</h5>
@@ -65,7 +65,7 @@ export default {
                     </div>
                     <div class="gallery-info">
                         <div>
-                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-user"></i> demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
                         </div>
                         <h5>Fashion Tren Now A Days</h5>
@@ -136,21 +136,13 @@ button:hover {
 }
 
 .label {
-    background-color: $white;
     color: $dark-gray;
     font-size: 14px;
     font-weight: 500;
-    padding: 3px 15px;
-    border-radius: 7px;
-    cursor: pointer;
 
     position: absolute;
     top: 15px;
     left: 15px;
-}
-
-.label:hover {
-    color: $red;
 }
 
 .info {
