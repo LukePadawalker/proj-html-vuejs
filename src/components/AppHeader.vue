@@ -1,9 +1,13 @@
 <script>
+import HeaderLinks from './Header/HeaderLinks.vue'
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    components: { HeaderLinks }
 }
 </script>
 
-<template></template>
+<template>
+    <HeaderLinks />
+</template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
