@@ -73,7 +73,7 @@ export default {
 <style lang="scss">
 .gallery-row {
     display: flex;
-    margin: 0 -1rem;
+    padding: 0 -1rem;
 }
 
 .gallery-title {
