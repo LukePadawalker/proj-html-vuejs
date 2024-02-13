@@ -40,7 +40,6 @@ export default {
     border: 0;
     background-color: transparent;
 
-    padding: 6px;
     width: 100%;
 }
 
@@ -62,7 +61,6 @@ picture {
     z-index: -1;
 
 
-
     .img {
         position: absolute;
         top: 0;
@@ -71,16 +69,20 @@ picture {
         right: 0;
         z-index: -1;
 
-
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 5px;
+
+        &.filter {
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
     }
+}
 
-    // .img.filter {
-    //     background: rgba(0, 0, 0, 0.50);
-    // }
-
+.card:hover .filter {
+    transition: background-color 0.5s;
+    background-color: rgba(85, 85, 85, 0.3);
 }
 
 .info {
