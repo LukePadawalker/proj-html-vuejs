@@ -8,8 +8,10 @@ export default {
 </script>
 
 <template>
-    <BottomMain />
-    <TopMain />
+    <div class="container">
+        <TopMain />
+        <BottomMain />
+    </div>
 </template>
 
 <style lang="scss"></style>

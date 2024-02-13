@@ -1,15 +1,22 @@
 <script>
-import MainLifestylesVue from './MainBody/TopComps/MainLifestyles.vue';
-import MainNewsVue from './MainBody/TopComps/MainNews.vue';
+import LifestylesCarousel from './MainBody/TopComps/MainLifestyles.vue';
+
 export default {
     name: 'TopMain',
-    components: { MainLifestylesVue, MainNewsVue }
+    components: { LifestylesCarousel }
 }
 </script>
 
 <template>
-    <MainLifestylesVue />
-    <MainNewsVue />
+    <LifestylesCarousel />
+    <section id="display-boxes">
+
+    </section>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+#display-boxes {
+    height: 300px;
+    background-color: bisque;
+}
+</style>
