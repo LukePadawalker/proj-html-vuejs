@@ -27,6 +27,8 @@ export default {
                     <h5>Place For A Road Trip</h5>
                 </div>
             </div>
+
+
             <div class="right-gallery">
                 <div class="card-gallery d-flex align-items-center gap-3">
                     <img src="../../../assets/img/music-love.webp" alt="Culture">
@@ -35,11 +37,31 @@ export default {
                             <span><i class="fa-solid fa-user"></i> Demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
                         </p>
-                        <h5>Place For A Road Trip</h5>
+                        <h5>Music The Love Of My Life</h5>
                     </div>
                 </div>
-                <div class="card-gallery"></div>
-                <div class="card-gallery"></div>
+                <hr>
+                <div class="card-gallery d-flex align-items-center gap-3"><img src="../../../assets/img/success-story.webp"
+                        alt="Culture">
+                    <div class="gallery-info">
+                        <p>
+                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
+                        </p>
+                        <h5>The Best Success Stories</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="card-gallery d-flex align-items-center gap-3"><img src="../../../assets/img/anime-fashion.webp"
+                        alt="Culture">
+                    <div class="gallery-info">
+                        <p>
+                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
+                        </p>
+                        <h5>Fashion Tren Now A Days</h5>
+                    </div>
+                </div>
             </div>
         </div>
 
