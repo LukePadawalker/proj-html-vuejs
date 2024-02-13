@@ -4,9 +4,9 @@ export const gallery = [
         title: 'The Best Healthy Foods in 2022',
         date: 'December 26, 2022',
         src: 'healthy-foods.webp',
-        labels: {
-            Food
-        }
+        labels: [
+            'Food'
+        ]
     },
 
     {
@@ -14,9 +14,9 @@ export const gallery = [
         title: 'The Best Winter Outfits',
         date: 'December 26, 2022',
         src: 'winter.webp',
-        labels: {
-            Fashion
-        }
+        labels: [
+            'Fashion'
+        ]
     },
 
     {
@@ -24,9 +24,9 @@ export const gallery = [
         title: "Beginner Photographer's Mistakes",
         date: 'December 26, 2022',
         src: 'photographers-mistakes.webp',
-        labels: {
-            Fashion
-        }
+        labels: [
+            'Fashion'
+        ]
     },
 
     {
@@ -34,10 +34,10 @@ export const gallery = [
         title: 'Live Ideas You Might Be Anime',
         date: 'December 26, 2022',
         src: 'ideas-anime.webp',
-        labels: {
-            Culture,
-            Stories
-        }
+        labels: [
+            'Culture',
+            'Stories'
+        ]
     },
 
     {
@@ -45,10 +45,10 @@ export const gallery = [
         title: 'Reasons To Visit France',
         date: 'December 26, 2022',
         src: 'visit-france.webp',
-        labels: {
-            Lifestyle,
-            Travel
-        }
+        labels: [
+            'Lifestyle',
+            'Travel'
+        ]
     },
 
     {
@@ -56,10 +56,10 @@ export const gallery = [
         title: 'Traveling Alone Is Awesome',
         date: 'December 26, 2022',
         src: 'travel-alone.webp',
-        labels: {
-            Stories,
-            Travel
-        }
+        labels: [
+            'Stories',
+            'Travel'
+        ]
     },
 
     {
@@ -67,10 +67,10 @@ export const gallery = [
         title: 'The Best Success Stories',
         date: 'December 26, 2022',
         src: 'success-story.webp',
-        labels: {
-            Culture,
-            Stories
-        }
+        labels: [
+            'Culture',
+            'Stories'
+        ]
     },
 
     {
@@ -78,11 +78,11 @@ export const gallery = [
         title: 'Place For A Road Trip',
         date: 'December 25, 2022',
         src: 'best-places.webp',
-        labels: {
-            Lifestyle,
-            Stories,
-            Travel
-        }
+        labels: [
+            'Lifestyle',
+            'Stories',
+            'Travel'
+        ]
     },
 
     {
@@ -90,10 +90,10 @@ export const gallery = [
         title: 'Music The Love Of My Life',
         date: 'December 25, 2022',
         src: 'music-love.webp',
-        labels: {
-            Culture,
-            Lifestyle
-        }
+        labels: [
+            'Culture',
+            'Lifestyle'
+        ]
     },
 
     {
@@ -101,10 +101,10 @@ export const gallery = [
         title: 'Fashion Trend Now A Days',
         date: 'December 25, 2022',
         src: 'anime-fashion.webp',
-        labels: {
-            Fashion,
-            Lifestyle
-        }
+        labels: [
+            'Fashion',
+            'Lifestyle'
+        ]
     },
 
 
@@ -113,9 +113,9 @@ export const gallery = [
         title: 'Hygenic Receipe To Preare Rice',
         date: 'December 26, 2022',
         src: 'rice-ball.webp',
-        labels: {
-            Food
-        }
+        labels: [
+            'Food'
+        ]
     },
 
     {
@@ -123,8 +123,8 @@ export const gallery = [
         title: 'Th Best time To Have A Meal',
         date: 'December 26, 2022',
         src: 'meal-time-150x150.webp',
-        labels: {
-            Food
-        }
+        labels: [
+            'Food'
+        ]
     },
 ];
