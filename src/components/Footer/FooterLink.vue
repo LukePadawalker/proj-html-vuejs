@@ -23,6 +23,11 @@ ul li {
     a {
         text-decoration: none;
         color: white;
+        cursor: pointer;
+
+        &:hover {
+            color: grey;
+        }
     }
 }
 
