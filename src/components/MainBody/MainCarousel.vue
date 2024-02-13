@@ -1,6 +1,10 @@
 <script>
+import { gallery } from '../../data/index'
 export default {
-    name: 'MainCarousel'
+    name: 'MainCarousel',
+    data: () => ({
+        gallery
+    })
 }
 </script>
 
