@@ -22,7 +22,7 @@ export default {
                 </ul>
 
                 <div class="socials">
-                    <ul class="list-unstyled d-flex align-items-center py-2 px-4 mb-0">
+                    <ul class="list-unstyled d-flex align-items-center py-2 ps-4 mb-0">
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
@@ -30,7 +30,6 @@ export default {
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
 </template>

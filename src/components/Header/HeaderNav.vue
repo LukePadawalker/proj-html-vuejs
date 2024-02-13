@@ -4,6 +4,17 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <div class="header-nav">
+        <div class="container">
+            ciao
+        </div>
+    </div>
+</template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.header-nav {
+    border-top: 2px solid #F3F3F3;
+    background-color: #fff;
+}
+</style>

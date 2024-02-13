@@ -1,14 +1,18 @@
 <script>
 import HeaderLinks from './Header/HeaderLinks.vue'
+import HeaderAds from './Header/HeaderAds.vue'
+import HeaderNav from './Header/HeaderNav.vue'
 export default {
     name: 'AppHeader',
-    components: { HeaderLinks }
+    components: { HeaderLinks, HeaderAds, HeaderNav }
 }
 </script>
 
 <template>
     <header>
         <HeaderLinks />
+        <HeaderAds />
+        <HeaderNav />
     </header>
 </template>
 
