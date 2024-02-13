@@ -7,7 +7,14 @@ export default {
 </script>
 
 <template>
-    <HeaderLinks />
+    <header>
+        <HeaderLinks />
+    </header>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+    background-color: blue;
+    width: 100%;
+}
+</style>
