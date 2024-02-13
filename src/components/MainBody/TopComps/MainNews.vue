@@ -1,5 +1,7 @@
 <script>
-import DisplayCard from './MainBody/TopComps/DisplayCard.vue'
+import DisplayCard from './DisplayCard.vue'
+
+import { gallery } from '../../../data/_gallery'
 
 export default {
     name: 'MainNews',
