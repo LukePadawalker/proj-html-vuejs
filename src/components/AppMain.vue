@@ -13,7 +13,7 @@ export default {
     </div>
     <div class="banner">
         <div class="container">
-            <img src="../assets/img/page-banner-1-768x71.webp" alt="banner" class="rounded">
+            <img src="../assets/img/page-banner-1.webp" alt="banner" class="rounded">
         </div>
     </div>
     <div class="container">
