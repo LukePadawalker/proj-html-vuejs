@@ -34,8 +34,9 @@ footer {
     background-color: #bf1d2e;
     padding: 3rem;
     color: white;
-    border-top: 5px solid #333333;
+    border-top: 6px solid #333333;
     margin-top: 20px;
+    position: relative;
 
     .top-footer {
         border-bottom: 1px solid white;
@@ -67,5 +68,15 @@ footer {
             max-width: 250px;
         }
     }
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 30px;
+    height: 20px;
+    background: linear-gradient(#333333 00%, #333333 50%, transparent 50%, transparent);
 }
 </style>
