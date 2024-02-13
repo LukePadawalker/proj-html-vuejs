@@ -47,6 +47,8 @@ a {
         left: 20%;
         z-index: 1;
 
+        background-color: rgba(255, 255, 255, 0.3);
+
         align-items: center;
         justify-content: center;
 
@@ -66,16 +68,10 @@ a {
 
         span.btn-close {
             opacity: 1;
-            color: red;
+            color: white;
             font-size: 1.5rem;
-            background-color: rgba(255, 255, 255, 0.5);
         }
 
     }
-}
-
-.offcanvas-backdrop {
-    width: 0;
-    height: 0;
 }
 </style>
