@@ -43,13 +43,6 @@ export default {
     width: 100%;
 }
 
-.label {
-    padding: 5px 20px;
-    background-color: white;
-    border-radius: 5px;
-    margin: 5px;
-}
-
 picture {
     position: absolute;
     width: 100%;
@@ -75,14 +68,22 @@ picture {
 
         &.filter {
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.5);
+
         }
     }
 }
 
-.card:hover .filter {
-    transition: background-color 0.5s;
-    background-color: rgba(85, 85, 85, 0.3);
+.card:hover::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    content: "";
 }
 
 .info {

@@ -20,10 +20,10 @@ export default {
                 <img class="poster" src="../../../assets/img/best-places.webp" alt="Lifestyle">
                 <div class="label">Lifestyle</div>
                 <div class="info">
-                    <p>
+                    <div>
                         <span><i class="fa-solid fa-user"></i> Demo </span>
                         <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
-                    </p>
+                    </div>
                     <h5>Place For A Road Trip</h5>
                 </div>
             </div>
@@ -36,10 +36,10 @@ export default {
                         <div class="label">Culture</div>
                     </div>
                     <div class="gallery-info">
-                        <p>
+                        <div>
                             <span><i class="fa-solid fa-user"></i> Demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
-                        </p>
+                        </div>
                         <h5>Music The Love Of My Life</h5>
                     </div>
                 </div>
@@ -50,10 +50,10 @@ export default {
                         <div class="label">Culture</div>
                     </div>
                     <div class="gallery-info">
-                        <p>
+                        <div>
                             <span><i class="fa-solid fa-user"></i> Demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
-                        </p>
+                        </div>
                         <h5>The Best Success Stories</h5>
                     </div>
                 </div>
@@ -64,10 +64,10 @@ export default {
                         <div class="label">Fashion</div>
                     </div>
                     <div class="gallery-info">
-                        <p>
+                        <div>
                             <span><i class="fa-solid fa-user"></i> Demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
-                        </p>
+                        </div>
                         <h5>Fashion Tren Now A Days</h5>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ button:hover {
 }
 
 .left-poster:hover {
-    opacity: .7;
+    opacity: .8;
 }
 
 .poster {
@@ -147,10 +147,6 @@ button:hover {
     position: absolute;
     top: 15px;
     left: 15px;
-}
-
-.label:hover {
-    color: $red;
 }
 
 .info {
@@ -181,7 +177,7 @@ button:hover {
 }
 
 .gallery-poster:hover {
-    opacity: .7;
+    opacity: 0.8;
 }
 
 
