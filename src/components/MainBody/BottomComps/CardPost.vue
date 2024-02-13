@@ -1,18 +1,23 @@
 <script>
 export default {
-    name: 'CardPost'
+    name: 'CardPost',
+    props: {
+        src: String,
+        title: String,
+        date: String,
+    }
 }
 </script>
 
 <template>
     <div class="card border-0" style="width: 26.5rem;">
-        <img src="../../../assets/img/success-story.webp" class="card-img-top" alt="success">
+        <img :src="`src/assets/img/${src}`" :alt="title" class="card-img-top">
         <div class="card-body text-center rounded-bottom">
-            <h5 class="card-title fw-bold">Reason to visit France</h5>
-            <span class="date text-secondary fw-bold">December 26, 2022</span>
+            <h5 class="card-title fw-bold">{{ title }}</h5>
+            <span class="date text-secondary fw-bold">{{ date }}</span>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nulla sapiente placeat
                 illum quidem...</p>
-            <button type="button" class="rounded-pill fw-bold">Read More</button>
+            <button type="button" class="rounded-pill fw-bold"> Read More</button>
         </div>
     </div>
 </template>

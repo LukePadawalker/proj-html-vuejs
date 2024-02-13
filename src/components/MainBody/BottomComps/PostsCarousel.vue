@@ -4,9 +4,7 @@ import CardPost from './CardPost.vue';
 export default {
     name: 'PostsCarousel',
     components: { CardPost },
-    data: () => ({
-        ...gallery
-    }),
+    data: () => ({ gallery })
 }
 </script>
 
@@ -21,14 +19,8 @@ export default {
         </div>
     </div>
     <div class="row-cards">
-        <div class="col-card">
-            <CardPost />
-        </div>
-        <div class="col-card">
-            <CardPost />
-        </div>
-        <div class="col-card">
-            <CardPost />
+        <div class="col-card" v-for="(g, id) in gallery" :key="id">
+            <CardPost :src="g.src" :title="g.title" :date="g.date" />
         </div>
     </div>
 </template>
@@ -64,6 +56,7 @@ button {
     justify-content: space-between;
     width: 100%;
     gap: 10px;
+    overflow-x: hidden;
 
 
     .col-card {
