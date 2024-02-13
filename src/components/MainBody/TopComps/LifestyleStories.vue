@@ -149,10 +149,6 @@ button:hover {
     left: 15px;
 }
 
-.label:hover {
-    color: $red;
-}
-
 .info {
     color: $white;
     font-weight: 600;
