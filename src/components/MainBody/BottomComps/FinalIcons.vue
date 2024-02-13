@@ -8,62 +8,71 @@ export default {
     <div class="container-fluid">
         <div class="gallery-row">
             <div class="gallery-col" id="fashion">
-                <figure>
-                    <img src="../../../assets/img/anime-fashion.webp" alt="">
-                </figure>
-                <div class="gallery-title text-center">
+                <img src="../../../assets/img/anime-fashion.webp" alt="">
+                <div class="white-rectangle">
+
+                </div>
+                <div class="text-container">
                     <h4>Fashion</h4>
-                    <p class="post">3 post</p>
+                    <p class="post">3 posts</p>
+
                 </div>
             </div>
 
             <div class="gallery-col" id="culture">
-                <figure>
-                    <img src="../../../assets/img/success-story.webp" alt="">
-                </figure>
-                <div class="gallery-title text-center ">
+                <img src="../../../assets/img/success-story.webp" alt="">
+                <div class="white-rectangle">
+
+                </div>
+                <div class="text-container">
                     <h4>Culture</h4>
-                    <p class="post">3 post</p>
+                    <p class="post">3 posts</p>
+
                 </div>
             </div>
 
             <div class="gallery-col" id="food">
-                <figure>
-                    <img src="../../../assets/img/healthy-foods.webp" alt="">
-                </figure>
-                <div class="gallery-title text-center">
+                <img src="../../../assets/img/healthy-foods.webp" alt="">
+                <div class="white-rectangle">
+
+                </div>
+                <div class="text-container">
                     <h4>Food</h4>
-                    <p class="post">3 post</p>
+                    <p class="post">3 posts</p>
+
                 </div>
             </div>
 
             <div class="gallery-col" id="lifestyle">
-                <figure>
-                    <img src="../../../assets/img/visit-france.webp" alt="">
-                </figure>
-                <div class="gallery-title text-center">
+                <img src="../../../assets/img/visit-france.webp" alt="">
+                <div class="white-rectangle">
+                </div>
+                <div class="text-container">
                     <h4>Lifestyle</h4>
-                    <p class="post">3 post</p>
+                    <p class="post">3 posts</p>
+
                 </div>
             </div>
 
             <div class="gallery-col" id="stories">
-                <figure>
-                    <img src="../../../assets/img/travel-alone.webp" alt="">
-                </figure>
-                <div class="gallery-title text-center">
+                <img src="../../../assets/img/travel-alone.webp" alt="">
+                <div class="white-rectangle">
+
+                </div>
+                <div class="text-container">
                     <h4>Stories</h4>
-                    <p class="post">3 post</p>
+                    <p class="post">3 posts</p>
+
                 </div>
             </div>
 
-            <div class="gallery-col" id="travel">
-                <figure>
-                    <img src="../../../assets/img/best-places.webp" alt="">
-                </figure>
-                <div class="gallery-title text-center">
+            <div class="gallery-col text-center" id="travel">
+                <img src="../../../assets/img/best-places.webp" alt="">
+                <div class="white-rectangle">
+                </div>
+                <div class="text-container">
                     <h4>Travel</h4>
-                    <p class="post">3 post</p>
+                    <p class="post">3 posts</p>
                 </div>
             </div>
         </div>
@@ -73,41 +82,66 @@ export default {
 <style lang="scss">
 .gallery-row {
     display: flex;
+    justify-content: space-between;
+    gap: 10px;
     padding: 0 -1rem;
 }
 
-.gallery-title {
-    color: white;
+.white-rectangle {
+    width: 75%;
+    height: 75%;
+    border: 1px solid transparent;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 50px 70px;
-
+    z-index: 1;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: calc(50% - 25px);
     transform: translate(-50%, -50%);
+    transition: all .3s ease;
 }
 
 .gallery-col {
     border-radius: 5px;
-    margin: 1rem;
-    width: calc(100% / 6 - 2rem);
-    height: 250px;
+    width: calc(100% / 6 - 20px);
+    height: 200px;
     cursor: pointer;
     background-position: center;
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.655);
+    overflow: hidden;
+    transition: all 0.5 ease;
+
 
     /*Position relative per opacità statica */
     position: relative;
+
+
+
+    figure {
+        background-color: #bf1d2e;
+        border-radius: 5px;
+        transition: all .3s ease-in-out;
+
+    }
+
+    img {
+        border-radius: 5px;
+        width: 300px;
+        transform: translateX(-60px);
+        object-fit: contain;
+        overflow: hidden;
+        opacity: 1;
+        transition: background-color .3s ease-in-out;
+        transition: transform .5s ease;
+        opacity: 0.5;
+        background-color: rgb(0, 0, 0);
+        /* Green background with 30% opacity */
+
+
+    }
 }
 
-.gallery-col img {
-    border-radius: 5px;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    overflow: hidden;
-}
 
 /* Opacity nera statica */
 .gallery-col::before {
@@ -122,30 +156,62 @@ export default {
 }
 
 /* Opacity rossa all'hover */
-.gallery-col figure {
-    background-color: #bf1d2e;
-    border-radius: 5px;
+.gallery-col:hover {
+    background-color: rgb(255, 0, 0);
+    transform: translateX(-1px);
+
+
 }
 
-.gallery-col figure img {
-    opacity: 1;
-    -webkit-transition: .3s ease-in-out;
-    transition: background-color .3s ease-in-out;
-}
 
 .gallery-col:hover img {
-    opacity: .3;
+    transform: translateX(-1px);
+    opacity: 0.4;
+
+
 }
 
-.gallery-col:hover .gallery-title {
+.gallery-col:hover .white-rectangle {
+    transform: translate(calc(-50% + 25px), -50%);
     border: 1px solid white;
 }
 
-.post {
-    visibility: hidden;
+
+
+
+.text-container {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 25%;
+    left: 25%;
+
+    .post {
+        visibility: hidden;
+        transition: all .5s ease;
+        transform: translateX(-25px);
+        color: transparent;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+
+    }
+
+    h4 {
+        color: white;
+        text-transform: uppercase;
+        margin: 0 auto;
+        font-weight: 600;
+    }
 }
+
 
 .gallery-col:hover .post {
     visibility: visible;
+    transform: translateX(1px);
+    color: white;
 }
 </style>
