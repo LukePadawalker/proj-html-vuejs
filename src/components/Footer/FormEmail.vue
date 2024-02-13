@@ -31,5 +31,12 @@ input {
 button {
     width: 100%;
     height: 3rem;
+    background-color: #545454;
+    border: none;
+
+    &:hover {
+        color: #bf1d2e;
+        background-color: white;
+    }
 }
 </style>
