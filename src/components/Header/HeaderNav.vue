@@ -1,4 +1,6 @@
 <script>
+import SearchOffcanvas from './SearchOffcanvas.vue';
+
 export default {
     name: 'HeaderNav',
     data: () => ({
@@ -34,7 +36,10 @@ export default {
                 dropDown: null
             }
         ]
-    })
+    }),
+    components: {
+        SearchOffcanvas
+    }
 
 }
 </script>
@@ -54,7 +59,7 @@ export default {
                     </ul>
                 </div>
                 <div class="col-2 d-flex justify-content-end">
-                    <a href="#"><i class="fa-solid fa-magnifying-glass fs-2"></i></a>
+                    <SearchOffcanvas />
                 </div>
             </div>
         </div>

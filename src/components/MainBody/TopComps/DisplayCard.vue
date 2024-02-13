@@ -16,7 +16,7 @@ export default {
             <img class="img" :src="`src/assets/img/${object.src}`" :alt="object.title">
         </picture>
         <div id="labels" class="p-4">
-            <span class="label" v-for="label in object.labels">{{ label }}</span>
+            <a href="#" class="label" v-for="label in object.labels">{{ label }}</a>
         </div>
         <div class="info p-4">
             <span class="w-100">
@@ -30,6 +30,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: #bf1d2e;
+    }
+}
+
 .card {
     flex-shrink: 0;
     flex-grow: 1;
