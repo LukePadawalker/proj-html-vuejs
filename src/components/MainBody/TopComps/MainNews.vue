@@ -21,20 +21,20 @@ export default {
 <template>
     <section id="display-boxes" class="row">
         <div class="col">
-            <DisplayCard class="small" :object="galleryFilter[0]" />
+            <DisplayCard class="small mb-2" :object="galleryFilter[0]" />
             <DisplayCard class="small" :object="galleryFilter[1]" />
         </div>
-        <div class="col col-6">
+        <div class="col col-6 mx-2">
             <DisplayCard class="big" :object="galleryFilter[2]" />
         </div>
         <div class="col">
-            <DisplayCard class="small" :object="galleryFilter[3]" />
+            <DisplayCard class="small mb-2" :object="galleryFilter[3]" />
             <DisplayCard class="small" :object="galleryFilter[4]" />
         </div>
     </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #display-boxes {
     justify-content: space-between;
     height: 400px;
@@ -45,12 +45,10 @@ export default {
         flex-shrink: 0;
         align-content: space-between;
         height: 100%;
+
+        padding: 0;
     }
 
-    .col {
-        padding-left: 0;
-        padding-right: 0;
-    }
 
     .small {
         height: 50%;
@@ -58,7 +56,7 @@ export default {
     }
 
     .big {
-        height: 100%;
+        height: 102%;
     }
 }
 </style>

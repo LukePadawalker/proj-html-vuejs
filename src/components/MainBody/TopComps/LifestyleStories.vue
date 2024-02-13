@@ -27,19 +27,50 @@ export default {
                     <h5>Place For A Road Trip</h5>
                 </div>
             </div>
+
+
             <div class="right-gallery">
                 <div class="card-gallery d-flex align-items-center gap-3">
-                    <img src="../../../assets/img/music-love.webp" alt="Culture">
+                    <div class="gallery-poster">
+                        <img src="../../../assets/img/music-love.webp" alt="Culture">
+                        <div class="label">Culture</div>
+                    </div>
                     <div class="gallery-info">
                         <p>
                             <span><i class="fa-solid fa-user"></i> Demo </span>
                             <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
                         </p>
-                        <h5>Place For A Road Trip</h5>
+                        <h5>Music The Love Of My Life</h5>
                     </div>
                 </div>
-                <div class="card-gallery"></div>
-                <div class="card-gallery"></div>
+                <hr>
+                <div class="card-gallery d-flex align-items-center gap-3">
+                    <div class="gallery-poster">
+                        <img src="../../../assets/img/success-story.webp" alt="Culture">
+                        <div class="label">Culture</div>
+                    </div>
+                    <div class="gallery-info">
+                        <p>
+                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
+                        </p>
+                        <h5>The Best Success Stories</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="card-gallery d-flex align-items-center gap-3">
+                    <div class="gallery-poster">
+                        <img src="../../../assets/img/anime-fashion.webp" alt="Fashion">
+                        <div class="label">Fashion</div>
+                    </div>
+                    <div class="gallery-info">
+                        <p>
+                            <span><i class="fa-solid fa-user"></i> Demo </span>
+                            <span><i class="fa-solid fa-calendar-days"></i> December 25, 2022</span>
+                        </p>
+                        <h5>Fashion Tren Now A Days</h5>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -62,6 +93,10 @@ button {
     border-radius: 5px;
     border: 1px solid currentColor;
     padding: 5px 20px;
+}
+
+button:hover {
+    background-color: $red;
 }
 
 .section-image {
@@ -89,6 +124,10 @@ button {
     content: '';
 }
 
+.left-poster:hover {
+    opacity: .7;
+}
+
 .poster {
     width: 100%;
     height: 100%;
@@ -108,6 +147,10 @@ button {
     position: absolute;
     top: 15px;
     left: 15px;
+}
+
+.label:hover {
+    color: $red;
 }
 
 .info {
@@ -131,5 +174,25 @@ button {
 .gallery-info {
     color: $dark-gray;
     font-weight: 600;
+}
+
+.gallery-poster {
+    position: relative;
+}
+
+.gallery-poster:hover {
+    opacity: .7;
+}
+
+
+.gallery-poster::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    content: '';
 }
 </style>
