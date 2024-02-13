@@ -1,4 +1,4 @@
 import { gallery } from './_gallery';
-import { videoUrl } from './_video'
+import { ytVideos } from './_video';
 
-export { gallery, videoUrl }
+export { gallery, ytVideos }
