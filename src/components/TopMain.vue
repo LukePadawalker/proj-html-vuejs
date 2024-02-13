@@ -1,22 +1,19 @@
 <script>
-import LifestylesCarousel from './MainBody/TopComps/MainLifestyles.vue';
+import LifestylesCarousel from './MainBody/TopComps/LifestylesCarousel.vue';
+import MainNews from './MainBody/TopComps/MainNews.vue';
+
+import { gallery } from '../data/index'
 
 export default {
     name: 'TopMain',
-    components: { LifestylesCarousel }
+    components: { LifestylesCarousel, MainNews }
 }
 </script>
 
+
 <template>
     <LifestylesCarousel />
-    <section id="display-boxes">
-
-    </section>
+    <MainNews />
 </template>
 
-<style lang="scss" scoped>
-#display-boxes {
-    height: 300px;
-    background-color: bisque;
-}
-</style>
+<style lang="scss" scoped></style>
