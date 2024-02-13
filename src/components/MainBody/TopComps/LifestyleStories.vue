@@ -1,6 +1,18 @@
 <script>
+import { gallery } from '../../../data/index'
 export default {
-    name: 'Lifestyle & Stories'
+    name: 'Lifestyle & Stories',
+    data: () => ({
+        gallery
+    }),
+    methods: {
+        getRandomElements(array, n) {
+            const shuffledArray = [...array];
+            shuffledArray.sort(() => Math.random() - 0.5);
+            console.log(shuffledArray)
+            return shuffledArray.slice(0, n)
+        }
+    }
 }
 </script>
 
@@ -9,7 +21,7 @@ export default {
         <div class="section-header d-flex justify-content-between">
             <h3 class="section-title">Lifestyle & Stories</h3>
             <div class="btn-group">
-                <button>All</button>
+                <button @click="getRandomElements(gallery, 4)">All</button>
                 <button>Lifestyle</button>
                 <button>Stories</button>
             </div>
