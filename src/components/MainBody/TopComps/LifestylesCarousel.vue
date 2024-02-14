@@ -1,12 +1,12 @@
 <script>
 
 import { gallery } from '../../../data/_gallery';
-import CarCarouselCarddPost from '../TopComps/CarouselCard.vue';
+import CarouselCard from '../TopComps/CarouselCard.vue';
 
 export default {
     name: 'LifestylesCarousel',
+    data: () => ({ gallery }),
     components: { CarouselCard },
-    data: () => ({ gallery })
 }
 
 </script>
@@ -19,7 +19,7 @@ export default {
 
     <div class="row-cards">
         <div class="col-card" v-for="(g, id) in gallery" :key="id">
-            <CarouselCard :src="g.src" :title="g.title" :date="g.date" />
+            <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
         </div>
     </div>
 </template>
