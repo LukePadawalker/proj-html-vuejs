@@ -122,7 +122,7 @@ export const gallery = [
         id: 12,
         title: 'Th Best time To Have A Meal',
         date: 'December 26, 2022',
-        src: 'meal-time-150x150.webp',
+        src: 'healthy-foods.webp',
         labels: [
             'Food'
         ]
