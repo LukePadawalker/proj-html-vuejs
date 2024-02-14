@@ -7,9 +7,6 @@ export default {
     computed: {
         toggleCanvas() {
             this.openCanvas = !this.openCanvas
-            if (this.openCanvas === true) {
-
-            }
         }
     }
 }
@@ -47,7 +44,7 @@ a {
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #offcanvasTop {
