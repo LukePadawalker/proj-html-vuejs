@@ -4,8 +4,19 @@ import CardPost from './CardPost.vue';
 export default {
     name: 'PostsCarousel',
     components: { CardPost },
-    data: () => ({ gallery })
+    data: () => ({ gallery }),
+    methods: {
+        removeFoodLabels() {
+            this.gallery = this.gallery.filter(item => {
+                return !item.labels.includes('Food');
+            });
+        },
+    },
+    created() {
+        this.removeFoodLabels();
+    }
 }
+
 </script>
 
 <template>
