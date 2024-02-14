@@ -14,9 +14,11 @@ export default {
 
 <template>
     <div class="card border-0">
-        <img :src="`src/assets/img/${src}`" :alt="title" class="card-img-top">
-        <div id="labels" class="p-4">
-            <a href="#" class="label" v-for="label in labels">{{ label }}</a>
+        <div class="card-img">
+            <div id="labels" class="p-4">
+                <a href="#" class="label" v-for="label in labels">{{ label }}</a>
+            </div>
+            <img :src="`src/assets/img/${src}`" :alt="title" class="card-img-top">
         </div>
         <div class="card-body text-center rounded-bottom">
             <h5 class="card-title fw-bold">{{ title }}</h5>
@@ -28,7 +30,6 @@ export default {
 <style lang="scss" scoped>
 .card {
     width: 100%;
-
 }
 
 .card-body {
@@ -42,6 +43,19 @@ h5:hover {
 
 .card-img-top {
     width: 100%;
+}
 
+.card-img {
+    position: relative;
+
+    #labels {
+        position: absolute;
+        top: -10px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 </style>
