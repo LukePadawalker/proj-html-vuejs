@@ -6,8 +6,9 @@ import CarouselCard from '../TopComps/CarouselCard.vue';
 export default {
     name: 'LifestylesCarousel',
     data: () => ({ gallery }),
-    components: { CarouselCard },
+    components: { CarouselCard }
 }
+
 
 </script>
 
@@ -17,7 +18,7 @@ export default {
         <button class="prev"><i class="fa-solid fa-angle-left fa-lg"></i></button>
         <div class="row-cards">
             <div class="col-card" v-for="(g, id) in gallery" :key="id">
-                <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
+                <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" :id="g.id" />
             </div>
         </div>
     </div>

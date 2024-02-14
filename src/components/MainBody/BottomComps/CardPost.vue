@@ -2,6 +2,7 @@
 export default {
     name: 'CardPost',
     props: {
+        id: Number,
         src: String,
         title: String,
         date: String,

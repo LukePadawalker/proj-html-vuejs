@@ -4,15 +4,42 @@ import CardPost from './CardPost.vue';
 export default {
     name: 'PostsCarousel',
     components: { CardPost },
-    data: () => ({ gallery }),
+    data: () => ({
+        gallery: [],
+        currentId: 1,
+        postsPerPage: 3,
+        currentPage: 1,
+        autoPlay: null,
+    }),
     methods: {
         removeFoodLabels() {
             this.gallery = this.gallery.filter(item => {
                 return !item.labels.includes('Food');
             });
         },
+        updateCurrentPage(page) {
+            this.currentPage = page;
+        },
+        navigate(direction) {
+            if (direction === 'next') {
+                this.currentPage = (this.currentPage % this.totalPages) + 1;
+            } else if (direction === 'prev') {
+                this.currentPage = (this.currentPage - 2 + this.totalPages) % this.totalPages + 1;
+            }
+        }
+    },
+    computed: {
+        totalPages() {
+            return Math.ceil(this.gallery.length / this.postsPerPage);
+        },
+        currentArray() {
+            const start = (this.currentPage - 1) * this.postsPerPage;
+            const end = start + this.postsPerPage;
+            return this.gallery.slice(start, end);
+        }
     },
     created() {
+        this.gallery = gallery;
         this.removeFoodLabels();
     }
 }
@@ -25,13 +52,13 @@ export default {
             <h3 class="text-uppercase fw-bold">Featured posts</h3>
         </div>
         <div class="buttons-cards">
-            <button class="prev"><i class="fa-solid fa-angle-left fa-lg"></i></button>
-            <button class="next"><i class="fa-solid fa-angle-right fa-lg"></i></button>
+            <button class="prev" @click="() => navigate('prev')"><i class="fa-solid fa-angle-left fa-lg"></i></button>
+            <button class="next" @click="() => navigate('next')"><i class="fa-solid fa-angle-right fa-lg"></i></button>
         </div>
     </div>
     <div class="row-cards">
-        <div class="col-card" v-for="(g, id) in gallery" :key="id">
-            <CardPost :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
+        <div class="col-card" v-for="(g, id) in currentArray" :key="id">
+            <CardPost :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" :id="g.id" />
         </div>
     </div>
 </template>

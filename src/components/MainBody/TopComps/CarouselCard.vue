@@ -3,6 +3,7 @@
 export default {
     name: 'CarouselCard',
     props: {
+        id: Number,
         src: String,
         title: String,
         date: String,
