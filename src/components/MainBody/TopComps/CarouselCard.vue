@@ -44,6 +44,7 @@ h5:hover {
 
 .card-img-top {
     width: 100%;
+
 }
 
 .card-img {

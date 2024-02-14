@@ -43,7 +43,7 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -63,7 +63,7 @@ a {
         position: absolute;
         top: 50%;
         left: 20%;
-        z-index: 1;
+        z-index: 2;
 
 
         align-items: center;

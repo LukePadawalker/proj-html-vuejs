@@ -77,7 +77,7 @@ button {
 
     gap: 14px;
     flex-shrink: 0;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
 
 

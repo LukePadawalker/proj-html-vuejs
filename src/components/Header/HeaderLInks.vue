@@ -1,6 +1,16 @@
 <script>
+import CarouselHeaderTop from './CarouselHeaderTop.vue'
+
 export default {
-    name: 'HeaderLinks'
+    name: 'HeaderLinks',
+    components: {
+        CarouselHeaderTop
+    },
+    methods: {
+        CarouselSwitch(action) {
+            return action
+        }
+    }
 }
 </script>
 
@@ -8,17 +18,15 @@ export default {
     <div class="header-links">
         <div class="container d-flex justify-content-between">
             <div class="news-updates d-flex">
-                <h2 class="text-uppercase fs-6 py-1 px-3 mb-0 text-white align-items-center d-flex">news updates</h2>
-                <div class="carousel-img p-4"></div>
-                <h3 class="text-uppercase fs-6 py-1 px-3 mb-0 align-items-center d-flex fw-bolder">05:35 the best time to
-                    have a
-                    meal
-                </h3>
+                <h2 class="text-uppercase fs-6 py-1 px-3 mb-0 text-white align-items-center d-flex">
+                    news updates
+                </h2>
+                <CarouselHeaderTop />
             </div>
             <div class="links d-flex">
                 <ul class="list-unstyled d-flex align-items-center py-1 px-3 mb-0">
-                    <li><i class="fa-solid fa-chevron-left mx-4"></i></li>
-                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li type="button" @click="CarouselSwitch('prev')"><i class="fa-solid fa-chevron-left mx-4"></i></li>
+                    <li type="button" @click="CarouselSwitch('next')"><i class="fa-solid fa-chevron-right"></i></li>
                 </ul>
 
                 <div class="socials">
@@ -39,23 +47,8 @@ export default {
     background-color: #BF1D2E;
 }
 
-.carousel-img {
-    background-color: black;
-    height: 40px;
-    width: 40px;
-}
-
 h2 {
     background-color: #545454;
-}
-
-h3 {
-    color: #fff;
-
-    &:hover {
-        color: #3D3233;
-        cursor: pointer;
-    }
 }
 
 .links {
