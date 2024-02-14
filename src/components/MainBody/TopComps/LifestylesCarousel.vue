@@ -51,16 +51,29 @@ button {
 }
 
 .row-cards {
-    height: 350px;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    gap: 10px;
+    min-height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    gap: 20px;
     overflow-x: scroll;
+    flex-shrink: 0;
 
 
     .col-card {
-        width: calc(100% / 4);
+        width: calc(100% / 4 - 10px);
+        flex-shrink: 0;
+
+
     }
+}
+
+.row-cards::-webkit-scrollbar {
+    display: none;
 }
 </style>

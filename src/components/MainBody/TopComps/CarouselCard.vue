@@ -26,11 +26,22 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card {
+    width: 100%;
+
+}
+
 .card-body {
     background-color: #F3F3F3;
+    width: 100%;
 }
 
 h5:hover {
     color: #BF1D2E;
+}
+
+.card-img-top {
+    width: 100%;
+
 }
 </style>
