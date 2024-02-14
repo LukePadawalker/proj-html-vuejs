@@ -16,10 +16,11 @@ export default {
             <button class="prev"><i class="fa-solid fa-angle-left fa-lg"></i></button>
             <button class="next"><i class="fa-solid fa-angle-right fa-lg"></i></button>
         </div> -->
-
-    <div class="row-cards">
-        <div class="col-card" v-for="(g, id) in gallery" :key="id">
-            <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
+    <div class="background">
+        <div class="row-cards">
+            <div class="col-card" v-for="(g, id) in gallery" :key="id">
+                <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
+            </div>
         </div>
     </div>
 </template>
@@ -50,6 +51,12 @@ button {
     }
 }
 
+.background {
+    padding: 2rem 1rem 1rem 1rem;
+    background-color: #F3F3F3;
+    margin-bottom: 3rem;
+}
+
 .row-cards {
     width: 100%;
     min-height: 100px;
@@ -61,15 +68,15 @@ button {
     padding-right: 20px;
 
     gap: 20px;
-    overflow-x: scroll;
     flex-shrink: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
 
     .col-card {
         width: calc(100% / 4 - 10px);
         flex-shrink: 0;
-
-
+        height: 380px;
     }
 }
 

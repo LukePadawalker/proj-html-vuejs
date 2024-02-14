@@ -33,7 +33,7 @@ export default {
 }
 
 .card-body {
-    background-color: #F3F3F3;
+    background-color: #fff;
     width: 100%;
 }
 
