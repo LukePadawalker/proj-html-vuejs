@@ -2,20 +2,25 @@
 export default {
     name: "NavMenu",
     data: () => ({
+        openCanvas: false,
     }),
+    computed: {
+        toggleCanvas() {
+            this.openCanvas = !this.openCanvas
+        }
+    }
 }
 </script>
 
 <template>
-    <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+    <a href="#" type="button" @click="toggleCanvas">
         <i class="fa-solid fa-bars fs-2"></i>
     </a>
 
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu"
-        aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas offcanvas-start" :class="{ 'show': openCanvas }" id="offcanvasMenu">
         <div class="offcanvas-header">
             <div>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <i class="fa-solid fa-xmark" type="button" @click="toggleCanvas"></i>
             </div>
         </div>
         <div class="offcanvas-body">
@@ -36,10 +41,21 @@ export default {
                 </ul>
             </div>
         </div>
+        <div :class="{ 'canvas-overlay': openCanvas }"></div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+.canvas-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 45vw;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 a {
     color: #545454;
 
@@ -49,7 +65,7 @@ a {
 }
 
 #offcanvasMenu {
-    width: 50vw;
+    width: 45vw;
 
     .offcanvas-header {
         position: relative;
@@ -63,11 +79,17 @@ a {
             height: 50px;
             background-color: rgb(94, 93, 93);
 
-            button {
+            i.fa-xmark {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                translate: -55% -29%;
+                translate: -50% -50%;
+                z-index: 2;
+
+                color: white;
+
+                padding: 10px;
+                border: 2px solid white;
             }
         }
     }

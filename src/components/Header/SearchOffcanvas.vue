@@ -7,9 +7,6 @@ export default {
     computed: {
         toggleCanvas() {
             this.openCanvas = !this.openCanvas
-            if (this.openCanvas === true) {
-
-            }
         }
     }
 }
