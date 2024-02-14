@@ -56,7 +56,7 @@ export default {
                 <div class="col-8">
                     <LinksMenu />
                 </div>
-                <div class="col-2 d-flex justify-content-end">
+                <div class="col-2 d-flex justify-content-end position-relative">
                     <SearchOffcanvas />
                 </div>
             </div>

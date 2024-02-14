@@ -2,13 +2,15 @@
 import FinalIcons from './MainBody/BottomComps/FinalIcons.vue';
 import BottomMain from './BottomMain.vue';
 import TopMain from './TopMain.vue';
+import LifestylesCarousel from './MainBody/TopComps/LifestylesCarousel.vue';
 export default {
     name: 'AppMain',
-    components: { BottomMain, TopMain, FinalIcons }
+    components: { BottomMain, TopMain, FinalIcons, LifestylesCarousel }
 }
 </script>
 
 <template>
+    <LifestylesCarousel />
     <div class="container">
         <TopMain />
     </div>
