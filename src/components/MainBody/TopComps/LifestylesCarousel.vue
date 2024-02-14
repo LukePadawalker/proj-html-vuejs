@@ -7,7 +7,6 @@ export default {
     name: 'LifestylesCarousel',
     data: () => ({
         gallery: [],
-        currentId: 1,
         postsPerPage: 4,
         currentPage: 1
     }),

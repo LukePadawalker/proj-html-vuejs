@@ -6,7 +6,6 @@ export default {
     components: { CardPost },
     data: () => ({
         gallery: [],
-        currentId: 1,
         postsPerPage: 3,
         currentPage: 1
     }),
