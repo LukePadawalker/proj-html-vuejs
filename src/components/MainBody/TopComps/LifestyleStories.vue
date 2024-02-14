@@ -1,16 +1,19 @@
 <script>
 import { gallery } from '../../../data/index'
+import LifestyleCard from './LifestyleCard.vue';
 export default {
     name: 'Lifestyle & Stories',
     data: () => ({
-        gallery
+        gallery,
+        shuffledArray: []
     }),
+    components: { LifestyleCard },
     methods: {
         getRandomElements(array, n) {
-            const shuffledArray = [...array];
-            shuffledArray.sort(() => Math.random() - 0.5);
-            console.log(shuffledArray)
-            return shuffledArray.slice(0, n)
+            this.shuffledArray = [...array];
+            this.shuffledArray.sort(() => Math.random() - 0.5);
+            console.log(this.shuffledArray)
+            return this.shuffledArray.splice(0, n)
         }
     }
 }
@@ -21,7 +24,7 @@ export default {
         <div class="section-header d-flex justify-content-between">
             <h3 class="section-title">Lifestyle & Stories</h3>
             <div class="btn-group">
-                <button @click="getRandomElements(gallery, 4)">All</button>
+                <button @click="getRandomElements(gallery, 8)">All</button>
                 <button>Lifestyle</button>
                 <button>Stories</button>
             </div>
@@ -29,6 +32,7 @@ export default {
 
         <div class="section-image d-flex">
             <div class="left-poster">
+                <!-- <LifestyleCard /> -->
                 <img class="poster" src="../../../assets/img/best-places.webp" alt="Lifestyle">
                 <div class="label">Lifestyle</div>
                 <div class="info">
@@ -42,6 +46,7 @@ export default {
 
 
             <div class="right-gallery">
+
                 <div class="card-gallery d-flex align-items-center gap-3">
                     <div class="gallery-poster">
                         <img src="../../../assets/img/music-love.webp" alt="Culture">
