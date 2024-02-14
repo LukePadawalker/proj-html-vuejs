@@ -8,7 +8,8 @@ export default {
     data: () => ({
         gallery: [],
         postsPerPage: 4,
-        currentPage: 1
+        currentPage: 1,
+        intervalId: null
     }),
     components: { CarouselCard },
     methods: {
@@ -21,6 +22,14 @@ export default {
             } else if (direction === 'prev') {
                 this.currentPage = (this.currentPage - 2 + this.totalPages) % this.totalPages + 1;
             }
+        },
+        startAutoChange() {
+            this.intervalId = setInterval(() => {
+                this.navigate('next');
+            }, 2500);
+        },
+        stopAutoChange() {
+            clearInterval(this.intervalId);
         }
     },
     computed: {
@@ -35,6 +44,7 @@ export default {
     },
     created() {
         this.gallery = gallery;
+        this.startAutoChange();
     }
 }
 
