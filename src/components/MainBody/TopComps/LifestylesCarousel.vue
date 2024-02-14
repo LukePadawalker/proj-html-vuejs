@@ -5,8 +5,38 @@ import CarouselCard from '../TopComps/CarouselCard.vue';
 
 export default {
     name: 'LifestylesCarousel',
-    data: () => ({ gallery }),
-    components: { CarouselCard }
+    data: () => ({
+        gallery: [],
+        currentId: 1,
+        postsPerPage: 4,
+        currentPage: 1
+    }),
+    components: { CarouselCard },
+    methods: {
+        updateCurrentPage(page) {
+            this.currentPage = page;
+        },
+        navigate(direction) {
+            if (direction === 'next') {
+                this.currentPage = (this.currentPage % this.totalPages) + 1;
+            } else if (direction === 'prev') {
+                this.currentPage = (this.currentPage - 2 + this.totalPages) % this.totalPages + 1;
+            }
+        }
+    },
+    computed: {
+        totalPages() {
+            return Math.ceil(this.gallery.length / this.postsPerPage);
+        },
+        currentArray() {
+            const start = (this.currentPage - 1) * this.postsPerPage;
+            const end = start + this.postsPerPage;
+            return this.gallery.slice(start, end);
+        }
+    },
+    created() {
+        this.gallery = gallery;
+    }
 }
 
 
@@ -14,10 +44,10 @@ export default {
 
 <template>
     <div class="background">
-        <button class="next"><i class="fa-solid fa-angle-right fa-lg"></i></button>
-        <button class="prev"><i class="fa-solid fa-angle-left fa-lg"></i></button>
+        <button class="next" @click="() => navigate('prev')"><i class="fa-solid fa-angle-right fa-lg"></i></button>
+        <button class="prev" @click="() => navigate('next')"><i class="fa-solid fa-angle-left fa-lg"></i></button>
         <div class="row-cards">
-            <div class="col-card" v-for="(g, id) in gallery" :key="id">
+            <div class="col-card" v-for="(g, id) in currentArray" :key="id">
                 <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" :id="g.id" />
             </div>
         </div>

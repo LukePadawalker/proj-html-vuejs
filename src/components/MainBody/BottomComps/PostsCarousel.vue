@@ -8,8 +8,7 @@ export default {
         gallery: [],
         currentId: 1,
         postsPerPage: 3,
-        currentPage: 1,
-        autoPlay: null,
+        currentPage: 1
     }),
     methods: {
         removeFoodLabels() {
