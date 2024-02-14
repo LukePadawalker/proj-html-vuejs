@@ -51,16 +51,16 @@ button {
 }
 
 .row-cards {
-    height: 300px;
+    height: 350px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 10px;
-    overflow-x: hidden;
+    overflow-x: scroll;
 
 
     .col-card {
-        flex-basis: calc(100% / 3);
+        width: calc(100% / 4);
     }
 }
 </style>
