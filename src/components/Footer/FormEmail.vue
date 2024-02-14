@@ -1,6 +1,16 @@
 <script>
 export default {
-    name: 'FormEmail'
+    name: 'FormEmail',
+    data: () => ({
+        email: '',
+        registrationMessage: ''
+    }),
+    methods: {
+        registerEmail() {
+            this.registrationMessage = 'Your submission was successful.'
+            this.email = '';
+        }
+    }
 }
 </script>
 
@@ -9,10 +19,10 @@ export default {
         <h5>subrscibe to newsletter</h5>
         <form>
             <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email">
-                <button type="button" class="btn btn-secondary shadow fw-bold">SUBSCRIBE</button>
+                <input v-model="email" type="email" class="form-control" placeholder="Email">
+                <button @click="registerEmail" type="button" class="btn btn-secondary shadow fw-bold">SUBSCRIBE</button>
+                <p v-if="registrationMessage">{{ registrationMessage }}</p>
             </div>
-
         </form>
     </div>
 </template>
@@ -38,5 +48,9 @@ button {
         color: #bf1d2e;
         background-color: white;
     }
+}
+
+p {
+    font-size: 1.2rem;
 }
 </style>
