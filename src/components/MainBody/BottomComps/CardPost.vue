@@ -5,13 +5,19 @@ export default {
         src: String,
         title: String,
         date: String,
+        labels: Array
     }
 }
 </script>
 
 <template>
     <div class="card border-0" style="width: 26.5rem;">
-        <img :src="`src/assets/img/${src}`" :alt="title" class="card-img-top">
+        <div class="card-img">
+            <div id="labels" class="p-4">
+                <a href="#" class="label" v-for="label in labels">{{ label }}</a>
+            </div>
+            <img :src="`src/assets/img/${src}`" :alt="title" class="card-img-top">
+        </div>
         <div class="card-body text-center rounded-bottom">
             <h5 class="card-title fw-bold">{{ title }}</h5>
             <span class="date text-secondary fw-bold">{{ date }}</span>
@@ -43,6 +49,20 @@ button {
     &:hover {
         background-color: #545454;
         transition: background-color .3s ease;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-img {
+    position: relative;
+
+    #labels {
+        position: absolute;
+        top: -10px;
     }
 }
 </style>

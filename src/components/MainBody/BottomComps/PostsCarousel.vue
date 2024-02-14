@@ -20,7 +20,7 @@ export default {
     </div>
     <div class="row-cards">
         <div class="col-card" v-for="(g, id) in gallery" :key="id">
-            <CardPost :src="g.src" :title="g.title" :date="g.date" />
+            <CardPost :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
         </div>
     </div>
 </template>
