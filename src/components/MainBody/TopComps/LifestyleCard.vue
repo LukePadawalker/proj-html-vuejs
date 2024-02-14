@@ -17,6 +17,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../../assets/scss/vars' as *;
+
 .poster {
     width: 100%;
     height: 100%;
