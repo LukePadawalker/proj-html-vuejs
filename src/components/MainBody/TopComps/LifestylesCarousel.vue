@@ -12,11 +12,9 @@ export default {
 </script>
 
 <template>
-    <!-- <div class="buttons-cards">
-            <button class="prev"><i class="fa-solid fa-angle-left fa-lg"></i></button>
-            <button class="next"><i class="fa-solid fa-angle-right fa-lg"></i></button>
-        </div> -->
     <div class="background">
+        <button class="next"><i class="fa-solid fa-angle-right fa-lg"></i></button>
+        <button class="prev"><i class="fa-solid fa-angle-left fa-lg"></i></button>
         <div class="row-cards">
             <div class="col-card" v-for="(g, id) in gallery" :key="id">
                 <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" />
@@ -30,9 +28,25 @@ h4 {
     color: #333333;
 }
 
-.buttons-cards {
-    display: flex;
-    gap: 1.2rem;
+.background {
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #F3F3F3;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.prev {
+    position: absolute;
+    bottom: 50%;
+    left: 50px;
+    z-index: 1;
+}
+
+.next {
+    position: absolute;
+    right: 50px;
+    bottom: 50%;
+    z-index: 1;
 }
 
 button {
@@ -41,33 +55,26 @@ button {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
-    background-color: #333333;
-    color: white;
+    background-color: #fff;
+    color: #BF1D2E;
     cursor: pointer;
 
     &:hover {
         background-color: #BF1D2E;
+        color: white;
         transition: background-color .3s ease;
     }
 }
 
-.background {
-    padding: 2rem 1rem 1rem 1rem;
-    background-color: #F3F3F3;
-    margin-bottom: 3rem;
-}
 
 .row-cards {
     width: 100%;
     min-height: 100px;
     margin-bottom: 20px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding-left: 20px;
-    padding-right: 20px;
 
-    gap: 20px;
+
+    gap: 14px;
     flex-shrink: 0;
     overflow-x: hidden;
     overflow-y: hidden;
