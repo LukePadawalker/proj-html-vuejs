@@ -129,7 +129,7 @@ export default {
         position: absolute;
         right: 0;
         border-radius: 5px;
-        width: 300px;
+        width: 350px;
         object-fit: contain;
         overflow: hidden;
         opacity: 1;
@@ -166,7 +166,7 @@ export default {
 
 
 .gallery-col:hover img {
-    transform: translateX(25px);
+    transform: translateX(65px);
     opacity: 0.4;
 
 
