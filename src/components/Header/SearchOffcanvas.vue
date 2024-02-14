@@ -1,21 +1,32 @@
 <script>
 export default {
-    name: "SearchOffcanvas"
+    name: "SearchOffcanvas",
+    data: () => ({
+        openCanvas: false,
+    }),
+    computed: {
+        toggleCanvas() {
+            this.openCanvas = !this.openCanvas
+            if (this.openCanvas === true) {
 
+            }
+        }
+    }
 }
 </script>
 
 <template>
-    <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+    <a href="#" type="button" @click="toggleCanvas">
         <i class="fa-solid fa-magnifying-glass fs-2"></i>
     </a>
-
-    <div class="offcanvas" tabindex="-1" id="offcanvasTop">
-        <div class="offcanvas-body d-flex">
-            <form>
-                <input type="text" placeholder="Search...">
-            </form>
-            <span type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></span>
+    <div :class="{ 'canvas-overlay': openCanvas }">
+        <div class="offcanvas" :class="{ 'show': openCanvas }" id="offcanvasTop">
+            <div class="canvas-body d-flex">
+                <form>
+                    <input type="text" placeholder="Search...">
+                </form>
+                <i class="fa-solid fa-xmark" type="button" @click="toggleCanvas"></i>
+            </div>
         </div>
     </div>
 </template>
@@ -27,6 +38,16 @@ a {
     &:hover {
         color: #BF1D2E;
     }
+}
+
+.canvas-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #offcanvasTop {
@@ -41,13 +62,12 @@ a {
     width: 100vw;
 
 
-    .offcanvas-body {
+    .canvas-body {
         position: absolute;
         top: 50%;
         left: 20%;
         z-index: 1;
 
-        background-color: rgba(255, 255, 255, 0.3);
 
         align-items: center;
         justify-content: center;
@@ -66,10 +86,16 @@ a {
             color: white;
         }
 
-        span.btn-close {
+        i.fa-xmark {
             opacity: 1;
             color: white;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            transition: transform 0.5s;
+
+            &:hover {
+                transition: transform 0.5s;
+                transform: scale(1.2);
+            }
         }
 
     }
