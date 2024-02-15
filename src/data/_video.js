@@ -42,7 +42,7 @@ export const ytVideos = [
         id: 6,
         url: 'https://youtu.be/ICt1jYfucec',
         title: 'Vinland Saga | SHATTERED',
-        image: '/src/assets/img/thumbs/Vinland-Saga-|-Shattered.jpeg'
+        image: 'Vinland-Saga-Shattered.jpeg'
 
     },
 
