@@ -1,19 +1,21 @@
 <script>
 import { gallery } from '../../../data/index'
-import LifestyleCard from './LifestyleCard.vue';
 export default {
     name: 'Lifestyle & Stories',
     data: () => ({
         gallery,
         shuffledArray: []
     }),
-    components: { LifestyleCard },
     methods: {
         getRandomElements(array, n) {
             this.shuffledArray = [...array];
             this.shuffledArray.sort(() => Math.random() - 0.5);
             console.log(this.shuffledArray)
             return this.shuffledArray.splice(0, n)
+        },
+
+        scrImage() {
+            const src = `../../../assets/img/${pic.src}`
         }
     }
 }
@@ -24,7 +26,7 @@ export default {
         <div class="section-header d-flex justify-content-between">
             <h3 class="section-title">Lifestyle & Stories</h3>
             <div class="btn-group">
-                <button @click="getRandomElements(gallery, 8)">All</button>
+                <button @click="getRandomElements(gallery, 9)">All</button>
                 <button>Lifestyle</button>
                 <button>Stories</button>
             </div>
@@ -32,7 +34,6 @@ export default {
 
         <div class="section-image d-flex">
             <div class="left-poster">
-                <!-- <LifestyleCard /> -->
                 <img class="poster" src="../../../assets/img/best-places.webp" alt="Lifestyle">
                 <div class="label">Lifestyle</div>
                 <div class="info">
@@ -46,6 +47,24 @@ export default {
 
 
             <div class="right-gallery">
+                <!--Pezzo dinamico da finire-->
+                <!-- <div class="lifestyle-card" v-for="pic in gallery" :key="pic.id">
+                    <div class="card-gallery d-flex align-items-center gap-3">
+                        <div class="gallery-poster">
+                            <img :src="`../../../assets/img/${pic.src}`" :alt="pic.labels[0]">
+                            <div class="label">{{ pic.labels[0] }}</div>
+                        </div>
+                        <div class="gallery-info">
+                            <div>
+                                <span><i class="fa-solid fa-user"></i> demo </span>
+                                <span><i class="fa-solid fa-calendar-days"></i> {{ pic.date }}</span>
+                            </div>
+                            <h5>{{ pic.title }}</h5>
+                        </div>
+                    </div>
+                    <hr>
+                </div> -->
+
 
                 <div class="card-gallery d-flex align-items-center gap-3">
                     <div class="gallery-poster">
@@ -123,6 +142,9 @@ button:hover {
 
 }
 
+//_________________________________________
+
+//Left Poster
 .left-poster {
     width: 60%;
     height: 100%;
@@ -171,8 +193,14 @@ button:hover {
     left: 20px;
 }
 
+//Right Galler
 .right-gallery {
     padding: 0 20px;
+
+    width: 40%;
+    height: 100%;
+
+    overflow: auto;
 }
 
 .right-gallery img {
