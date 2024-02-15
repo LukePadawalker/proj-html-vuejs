@@ -166,7 +166,7 @@ export default {
 
 
 .gallery-col:hover img {
-    transform: translateX(65px);
+    transform: translateX(40px);
     opacity: 0.4;
 
 
