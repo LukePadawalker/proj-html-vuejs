@@ -37,7 +37,8 @@ export default {
         <div id="video-player" class="container">
             <div class="row d-flex">
                 <div id="video-container" class="col-8">
-                    <iframe width="1062" height="597" :src="this.videoUrl" :title="this.videoTitle" frameborder="0"
+                    <iframe width="1792" height="864" src="https://www.youtube.com/embed/ebHd_3QJNBA"
+                        title="Sword of the Stranger fight scene" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
 
