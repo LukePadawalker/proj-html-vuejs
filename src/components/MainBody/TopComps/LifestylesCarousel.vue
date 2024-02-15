@@ -53,8 +53,10 @@ export default {
 
 <template>
     <div class="background">
-        <button class="next" @click="() => navigate('prev')"><i class="fa-solid fa-angle-right fa-lg"></i></button>
-        <button class="prev" @click="() => navigate('next')"><i class="fa-solid fa-angle-left fa-lg"></i></button>
+        <button class="next" @mouseover="stopAutoChange" @mouseout="startAutoChange" @click="() => navigate('prev')"><i
+                class="fa-solid fa-angle-right fa-lg"></i></button>
+        <button class="prev" @mouseover="stopAutoChange" @mouseout="startAutoChange" @click="() => navigate('next')"><i
+                class="fa-solid fa-angle-left fa-lg"></i></button>
         <div class="row-cards">
             <div class="col-card" v-for="(g, id) in currentArray" :key="id">
                 <CarouselCard :src="g.src" :title="g.title" :date="g.date" :labels="g.labels" :id="g.id" />

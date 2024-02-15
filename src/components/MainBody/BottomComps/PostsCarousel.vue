@@ -60,8 +60,10 @@ export default {
             <h3 class="text-uppercase fw-bold">Featured posts</h3>
         </div>
         <div class="buttons-cards">
-            <button class="prev" @click="() => navigate('prev')"><i class="fa-solid fa-angle-left fa-lg"></i></button>
-            <button class="next" @click="() => navigate('next')"><i class="fa-solid fa-angle-right fa-lg"></i></button>
+            <button class="prev" @mouseover="stopAutoChange" @mouseout="startAutoChange" @click="() => navigate('prev')"><i
+                    class="fa-solid fa-angle-left fa-lg"></i></button>
+            <button class="next" @mouseover="stopAutoChange" @mouseout="startAutoChange" @click="() => navigate('next')"><i
+                    class="fa-solid fa-angle-right fa-lg"></i></button>
         </div>
     </div>
     <div class="row-cards">
