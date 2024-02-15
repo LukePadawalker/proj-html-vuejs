@@ -6,7 +6,8 @@ export default {
         ytVideos,
         videoId: 1,
         videoUrl: 'https://www.youtube.com/watch?v=ebHd_3QJNBA',
-        videoTitle: ''
+        videoTitle: '',
+        videoImage: ''
     }),
     computed: {
         videoThumb() {
@@ -19,8 +20,9 @@ export default {
             this.videoId = videoid;
             this.videoUrl = videourl;
             this.videoTitle = videotitle;
+            this.videoImage = this.videoImage
 
-            console.log(this.videoId, this.videoUrl, this.videoTitle)
+            console.log(this.videoId, this.videoUrl, this.videoTitle,)
 
 
 
@@ -58,7 +60,7 @@ export default {
                                 <p>{{ video.id }}</p>
                             </div>
                             <div id="video-thumb">
-                                <img :src="videoThumb" alt="thumbnail">
+                                <img :src="video.image" alt="thumbnail">
                             </div>
                             <div id="video-title">
                                 <p>{{ video.title }}</p>
@@ -140,6 +142,11 @@ export default {
                             color: white;
                             font-size: 0.8rem;
                             transition: all .2s ease;
+                        }
+
+                        img {
+                            max-width: 70px;
+                            border-radius: 10px;
                         }
                     }
 
