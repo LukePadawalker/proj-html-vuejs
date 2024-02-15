@@ -13,10 +13,15 @@ export default {
     },
     computed: {
         setCurrentId() {
+            let activeId
             if (this.currentId < 1) {
                 this.currentId = (this.gallery.length)
+                return activeId = this.currentId
             } else if (this.currentId > this.gallery.length) {
                 this.currentId = 1
+                return activeId = this.currentId
+            } else {
+                return activeId = this.currentId
             }
         }
     },
@@ -39,7 +44,7 @@ export default {
                 <h2 class="text-uppercase fs-6 py-1 px-3 mb-0 text-white align-items-center d-flex">
                     news updates
                 </h2>
-                <CarouselHeaderTop :currentId="currentId" />
+                <CarouselHeaderTop :activeId="setCurrentId" />
             </div>
             <div class="links d-flex">
                 <ul class="list-unstyled d-flex align-items-center py-1 px-3 mb-0">
