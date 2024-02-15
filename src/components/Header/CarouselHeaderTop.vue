@@ -6,7 +6,8 @@ export default {
     name: 'CarouselHeaderTop',
     data: () => ({
         gallery,
-        activeCard: ""
+        activeCard: "",
+        intervalId: null
     }),
     computed: {
         SetActiveId() {
@@ -20,7 +21,15 @@ export default {
         isActive(id) {
             if (this.SetActiveId === id) return "d-block"
             else return
-        }
+        },
+        startAutoChange() {
+            this.intervalId = setInterval(() => {
+                this.navigate('next');
+            }, 2500);
+        },
+    },
+    created() {
+        this.startAutoChange();
     }
 }
 </script>
@@ -29,7 +38,7 @@ export default {
     <div v-for="{ id, title, src } in this.gallery" :key="id" class="slide" :class="isActive(id)">
         <div class="d-flex">
             <picture class="carousel-img">
-                <img :src="`../../assets/img/${src}`" class="img-fluid" :alt="img">
+                <img src="../../assets/img/anime-fashion.webp" class="img-fluid" :alt="img">
             </picture>
             <h3 class="text-uppercase fs-6 py-1 px-3 mb-0 align-items-center d-flex fw-bolder"> 05:35 {{ title }}
             </h3>
