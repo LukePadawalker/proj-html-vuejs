@@ -7,7 +7,6 @@ export default {
     data: () => ({
         gallery,
         activeCard: "",
-        intervalId: null
     }),
     computed: {
         SetActiveId() {
@@ -22,15 +21,8 @@ export default {
             if (this.SetActiveId === id) return "d-block"
             else return
         },
-        startAutoChange() {
-            this.intervalId = setInterval(() => {
-                this.navigate('next');
-            }, 2500);
-        },
+
     },
-    created() {
-        this.startAutoChange();
-    }
 }
 </script>
 

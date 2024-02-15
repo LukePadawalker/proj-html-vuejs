@@ -7,6 +7,8 @@ export default {
     data: () => ({
         gallery,
         currentId: 1,
+        intervalId: null
+
     }),
     components: {
         CarouselHeaderTop
@@ -32,7 +34,16 @@ export default {
             } else if (direction === 'prev') {
                 this.currentId--;
             }
-        }
+        },
+        startAutoChange() {
+            this.intervalId = setInterval(() => {
+                this.navigate('next');
+            }, 2500);
+        },
+    },
+    created() {
+        this.gallery = gallery;
+        this.startAutoChange();
     }
 }
 </script>
