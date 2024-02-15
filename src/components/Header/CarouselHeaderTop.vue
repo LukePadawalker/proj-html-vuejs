@@ -6,26 +6,21 @@ export default {
     name: 'CarouselHeaderTop',
     data: () => ({
         gallery,
-        activeCard: 1,
-    })
-    //     computed: {
-    //         setActiveCard(id) {
-    //             const nextId = id++
-    //             this.activeCard === nextId ? true : false
-    //         }
-    //     },
-    //     methods: {
-    //     },
-    //     mounted: {
-    //         startAutoplay() {
-    //             setInterval(setActiveCard(this.id), 3000);
-    //         }
-    //     }
+
+    }),
+    computed: {
+
+    },
+    props: {
+        activeId: Number
+    },
+    methods: {
+    }
 }
 </script>
-<!-- :class="{ 'd-block': setActiveCard(id) }" -->
+
 <template>
-    <div v-for="{ id, title, src } in this.gallery" :key="id" class="d-none" :class="{ 'd-block': activeCard === id }">
+    <div v-for="{ id, title, src } in this.gallery" :key="id" class="d-none">
         <picture class="carousel-img p-4">
             <img :src="`../../assets/img/${src}`" :alt="title">
         </picture>

@@ -1,14 +1,32 @@
 <script>
 import CarouselHeaderTop from './CarouselHeaderTop.vue'
+import { gallery } from '../../data/_gallery'
 
 export default {
     name: 'HeaderLinks',
+    data: () => ({
+        gallery,
+        currentId: 1,
+    }),
     components: {
         CarouselHeaderTop
     },
+    computed: {
+        setCurrentId() {
+            if (this.currentId < 1) {
+                this.currentId = (this.gallery.length)
+            } else if (this.currentId > this.gallery.length) {
+                this.currentId = 1
+            }
+        }
+    },
     methods: {
-        CarouselSwitch(action) {
-            return action
+        navigate(direction) {
+            if (direction === 'next') {
+                this.currentId++;
+            } else if (direction === 'prev') {
+                this.currentId--;
+            }
         }
     }
 }
@@ -21,12 +39,12 @@ export default {
                 <h2 class="text-uppercase fs-6 py-1 px-3 mb-0 text-white align-items-center d-flex">
                     news updates
                 </h2>
-                <CarouselHeaderTop />
+                <CarouselHeaderTop :currentId="currentId" />
             </div>
             <div class="links d-flex">
                 <ul class="list-unstyled d-flex align-items-center py-1 px-3 mb-0">
-                    <li type="button" @click="CarouselSwitch('prev')"><i class="fa-solid fa-chevron-left mx-4"></i></li>
-                    <li type="button" @click="CarouselSwitch('next')"><i class="fa-solid fa-chevron-right"></i></li>
+                    <li type="button" @click="() => navigate('prev')"><i class="fa-solid fa-chevron-left mx-4"></i></li>
+                    <li type="button" @click="() => navigate('next')"><i class="fa-solid fa-chevron-right"></i></li>
                 </ul>
 
                 <div class="socials">

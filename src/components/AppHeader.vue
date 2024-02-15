@@ -1,5 +1,5 @@
 <script>
-import HeaderLinks from './Header/HeaderLinks.vue'
+import HeaderLinks from './Header/HeaderLInks.vue'
 import HeaderAds from './Header/HeaderAds.vue'
 import HeaderNav from './Header/HeaderNav.vue'
 export default {
