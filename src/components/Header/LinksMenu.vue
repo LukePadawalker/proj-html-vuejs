@@ -1,39 +1,9 @@
 <script>
+import { links } from '../../data/index';
 export default {
     name: "LinksMenu",
     data: () => ({
-        links: [
-            {
-                name: 'home',
-                icon: 'fa-solid fa-house-chimney',
-                dropDown: null
-            },
-            {
-                name: 'about us',
-                icon: 'fa-solid fa-user',
-                dropDown: null
-            },
-            {
-                name: 'lifestyle',
-                icon: 'fa-solid fa-suitcase',
-                dropDown: 'fa-solid fa-angle-down'
-            },
-            {
-                name: 'stories',
-                icon: 'fa-solid fa-book-open-reader',
-                dropDown: 'fa-solid fa-angle-down'
-            },
-            {
-                name: 'pages',
-                icon: 'fa-solid fa-book',
-                dropDown: null
-            },
-            {
-                name: 'contact us',
-                icon: 'fa-solid fa-envelope',
-                dropDown: null
-            }
-        ]
+        links
     }),
 }
 </script>
